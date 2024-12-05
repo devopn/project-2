@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="result-container">
+        <h1>Результат проверки</h1>
+        <p>Начальная точка: {{ start }}</p>
+        <p>Конечная точка: {{ end }}</p>
+        <p>Результат: {{ result|safe }}</p>
+        <a href="/check_weather">Назад</a>
+    </div>
+</body>
+</html>
