@@ -9,8 +9,11 @@ def get_city_info(city_name: str, config:Config) -> dict:
     }
     
     response = requests.get(base_url, params=query)
+    # print(response.json())
     if response.status_code != 200:
         raise Exception('Проблемы с AccuWeather: ' + str(response.status_code))
+    if len(response.json()) == 0:
+        raise Exception('Город не найден')
     return {
         'key': response.json()[0]['Key'],
         'name': response.json()[0]['LocalizedName'],

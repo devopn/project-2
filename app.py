@@ -48,11 +48,9 @@ def check_weather():
 def error_handler(e):
     return render_template('error.html', error=str(e))
 
-
 @app.errorhandler(500)
 def error_handler(e):
     return render_template('error.html', error=str(e))
-
 
 @app.errorhandler(503)
 def error_handler(e):
