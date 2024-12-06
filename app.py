@@ -44,6 +44,20 @@ def check_weather():
 
     return render_template('result.html', start=start, end=end,city1_weather=city1_weather, city2_weather=city2_weather, result=result1 or result2)
 
+@app.errorhandler(404)
+def error_handler(e):
+    return render_template('error.html', error=str(e))
+
+
+@app.errorhandler(500)
+def error_handler(e):
+    return render_template('error.html', error=str(e))
+
+
+@app.errorhandler(503)
+def error_handler(e):
+    return render_template('error.html', error=str(e))
+
 if __name__ == '__main__':
     config: Config = load_config()
     app.run()
