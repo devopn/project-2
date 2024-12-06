@@ -7,8 +7,10 @@ def get_city_info(city_name: str, config:Config) -> dict:
         'apikey': config.accuweather.daily_api,
         'q': city_name
     }
-    
-    response = requests.get(base_url, params=query)
+    try:
+        response = requests.get(base_url, params=query)
+    except Exception as e:
+        raise Exception('Проблемы с подключением к API')
     # print(response.json())
     if response.status_code != 200:
         raise Exception('Проблемы с AccuWeather: ' + str(response.status_code))

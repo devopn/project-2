@@ -7,8 +7,10 @@ def get_daily_weather(code, config):
         'metric':True,
         'details':True
     }
-
-    response = requests.get(base_url, params=query)
+    try:
+        response = requests.get(base_url, params=query)
+    except Exception as e:
+        raise Exception('Проблемы с подключением к API')
     if response.status_code == 200:
         result = [
             {

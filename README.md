@@ -24,3 +24,6 @@ results page
 
 another result
 ![alt text](img/another.png)
+
+error handling
+![alt text](img/error.png)
