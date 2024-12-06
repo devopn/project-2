@@ -52,7 +52,7 @@ form button:hover {
 }
 
 .result-container {
-    max-width: 600px;
+    max-width: 900px;
     margin: 50px auto;
     background: #fff;
     padding: 20px;
@@ -121,4 +121,24 @@ form button:hover {
 .main-menu-link:hover {
     background: #007BFF;
     color: #fff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #007BFF;
+    color: #fff;
+}
+
+th:first-child, td:first-child {
+    text-align: center;
 }
