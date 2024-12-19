@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Route Checker</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>Проверка погодных условий</h1>
+    <form action="/check-weather" method="POST">
+        <label for="start">Начальная точка:</label>
+        <input type="text" id="start" name="start" placeholder="Введите название города" required>
+        
+        <label for="end">Конечная точка:</label>
+        <input type="text" id="end" name="end" placeholder="Введите название города" required>
+        
+        <button type="submit">Проверить погоду</button>
+    </form>
+
+    <a href="/" class="back_button">Назад</a>
+</body>
+</html>
